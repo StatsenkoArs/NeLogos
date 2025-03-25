@@ -7,11 +7,9 @@
 
 using namespace std;
 
-// Пример реализации функции F
 complex<double> F(complex<double> z)
 {
-  // Здесь должна быть ваша реализация функции F
-  return complex<double>(120) / (z * z * z * z * z * z);  // Пример: экспоненциальная функция
+  return complex<double>(120) / (z * z * z * z * z * z);
 }
 
 double f(double t)
@@ -24,7 +22,6 @@ double f_N(double t, double sigma, int N, double T)
   complex<double> result(0, 0);
   complex<double> s(sigma, 0);
 
-  // Действительная часть первой слагаемой
   result += 0.5 * real(F(s));
 
   for (int k = 1; k <= N; ++k)
